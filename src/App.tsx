@@ -1,11 +1,13 @@
-import { ResetCss } from "./styles/reset"
+import { ThemeProvider } from "styled-components"
+import { GlobalStyles, ResetCss, defaultTheme } from "./styles/"
 
 function App() {
   return (
-    <div>
+    <ThemeProvider theme={defaultTheme}>
       <ResetCss />
+      <GlobalStyles />
       <h1>hello world</h1>
-    </div>
+    </ThemeProvider>
   )
 }
 
